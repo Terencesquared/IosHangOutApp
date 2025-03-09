@@ -1,6 +1,6 @@
 import UIKit
 
-class ProportionalSplitViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ProportionalSplitViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FriendAdditionDelegate{
 
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
@@ -26,6 +26,12 @@ class ProportionalSplitViewController: UIViewController, UITableViewDelegate, UI
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
+    // ✅ Set the delegate before the segue occurs
+       override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           if let addFriendVC = segue.destination as? ProportionalAddFriendViewController {
+               addFriendVC.delegate = self  // ✅ Now the delegate is properly set
+           }
+       }
 
     // MARK: - TableView Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,16 +43,14 @@ class ProportionalSplitViewController: UIViewController, UITableViewDelegate, UI
         cell.textLabel?.text = friends[indexPath.row]
         return cell
     }
+    func didAddFriend(name: String) {
+           friends.append(name)
+           tableView.reloadData()
+       }
 }
 
 // MARK: - Delegate to Receive Friend's Name
-protocol FriendAdditionDelegate: AnyObject {
-    func didAddFriend(name: String)
-}
 
-extension ProportionalSplitViewController: FriendAdditionDelegate {
-    func didAddFriend(name: String) {
-        friends.append(name)
-        tableView.reloadData()
-    }
-}
+
+
+

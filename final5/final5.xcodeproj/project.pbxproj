@@ -124,8 +124,6 @@
 				D73157ED2D7886F8006406C1 /* final5 */,
 			);
 			name = final5;
-			packageProductDependencies = (
-			);
 			productName = final5;
 			productReference = D73157EB2D7886F8006406C1 /* final5.app */;
 			productType = "com.apple.product-type.application";
@@ -147,8 +145,6 @@
 				D73158042D7886FB006406C1 /* final5Tests */,
 			);
 			name = final5Tests;
-			packageProductDependencies = (
-			);
 			productName = final5Tests;
 			productReference = D73158012D7886FB006406C1 /* final5Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -170,8 +166,6 @@
 				D731580E2D7886FB006406C1 /* final5UITests */,
 			);
 			name = final5UITests;
-			packageProductDependencies = (
-			);
 			productName = final5UITests;
 			productReference = D731580B2D7886FB006406C1 /* final5UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -296,6 +290,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +318,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
